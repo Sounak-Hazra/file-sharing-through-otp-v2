@@ -1,46 +1,34 @@
-# Node modules
-node_modules/
+# === Backend ===
+/backend/node_modules/
+/backend/dist/
+/backend/build/
+/backend/logs/
+/backend/*.log
+/backend/pids/
+/backend/*.pid
+/backend/*.seed
+/backend/*.pid.lock
+/backend/.env*
+!/backend/.env.example
+
+# === Frontend ===
+/frontend/node_modules/
+/frontend/dist/
+/frontend/build/
+/frontend/.env*
+!/frontend/.env.example
+
+# === Common ===
+# OS generated files
+.DS_Store
+Thumbs.db
 
 # Logs
-logs/
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
-
-# OS-specific
-.DS_Store
-Thumbs.db
-
-# Environment files
-.env*
-!.env.example  # optional: keep an example env file for reference
-
-# Runtime
-pids/
-*.pid
-*.seed
-*.pid.lock
-
-# Dependency directories
-jspm_packages/
-
-# Optional npm cache directory
-.npm/
-
-# Optional eslint cache
-.eslintcache
-
-# TypeScript
-*.tsbuildinfo
-
-# Build output
-dist/
-build/
-
-# Coverage directory
-coverage/
 
 # IDEs and editors
 .vscode/
@@ -50,12 +38,19 @@ coverage/
 *.njsproj
 *.sln
 
-# Temporary files
+# npm cache
+.npm/
+
+# ESLint
+.eslintcache
+
+# TypeScript
+*.tsbuildinfo
+
+# Test & coverage
+coverage/
+test-output/
+
+# Temp
 tmp/
 temp/
-
-# Mac system files
-.AppleDouble
-
-# Test output
-test-output/
