@@ -1,5 +1,6 @@
 # === Backend ===
 /backend/node_modules/
+# ignore backend build/dist if any
 /backend/dist/
 /backend/build/
 /backend/logs/
@@ -11,12 +12,13 @@
 /backend/.env*
 !/backend/.env.example
 
-# === Frontend ===
-/frontend/node_modules/
-/frontend/dist/
-/frontend/build/
-/frontend/.env*
-!/frontend/.env.example
+# === Frontend (inside backend) ===
+/backend/frontend/node_modules/
+# ignore frontend build/dist
+/backend/frontend/dist/
+/backend/frontend/build/
+/backend/frontend/.env*
+!/backend/frontend/.env.example
 
 # === Common ===
 # OS generated files
