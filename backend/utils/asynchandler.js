@@ -1,7 +1,7 @@
 const asyncHandler = (requestFunction) => {
     return async (req, res, next) => {
         try {
-            requestFunction(req,res)
+            await requestFunction(req,res)
         } catch(error) {
             next(error)
         }
