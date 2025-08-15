@@ -43,11 +43,11 @@ const SendFile = () => {
     fromData.set("file", file)
 
     try {
-      const req = await fetch('http://localhost:5000/api/v1/upload/uploadSingle', {
+      const req = await fetch(`${import.meta.env.VITE_API_URL}/api/v1/upload/uploadSingle`, {
         method: 'POST',
         body: fromData,
       });
-
+      console.log(req)
       const data = await req.json()
 
       if (!data.file) {

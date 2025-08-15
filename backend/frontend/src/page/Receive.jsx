@@ -16,7 +16,7 @@ const Receive = () => {
         return;
       } 
 
-      const res = await fetch(`http://localhost:5000/api/v1/getdata/singleFile?otp=${otp}`)
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/v1/getdata/singleFile?otp=${otp}`)
       const {data} = await res.json()
 
       setLink(data.fileLink)
