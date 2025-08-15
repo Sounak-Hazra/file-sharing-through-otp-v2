@@ -46,7 +46,7 @@ const uploadController = asyncHandler(async (req, res) => {
   } catch (error) {
     console.error("Upload error:", error);
     res.status(500).json({ message: "Internal server error" });
-  }
+  }  
 });
 
 export default uploadController;
